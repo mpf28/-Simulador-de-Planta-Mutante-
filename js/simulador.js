@@ -1,6 +1,3 @@
-// === Simulador de Planta Mutante ===
-
-// Variables y estructura de datos
 const planta = {
     agua: 60,
     energia: 50,
@@ -31,7 +28,6 @@ const planta = {
     }
   ];
   
-  // Funciones
   function pedirAccion() {
     let mensaje = "Elige una acción para tu planta:\n";
     acciones.forEach(a => {
@@ -96,7 +92,6 @@ const planta = {
     
     alert(mensajeFinal);
   
-    // Preguntar si quiere jugar de nuevo
     let jugarDeNuevo = confirm("¿Querés jugar de nuevo?");
     if (jugarDeNuevo) {
       reiniciarJuego();
@@ -106,24 +101,19 @@ const planta = {
   }
   
   function reiniciarJuego() {
-    // Resetear el estado de la planta
     planta.agua = 60;
     planta.energia = 50;
     planta.mutacion = 0;
     planta.felicidad = 50;
     
-    // Limpiar consola
     console.clear();
     
-    // Mostrar mensaje de reinicio
     alert("🔄 ¡Nuevo juego iniciado! 🌱");
     console.log("🔄 Juego reiniciado - Nueva planta creada");
     
-    // Iniciar el juego nuevamente
     simularCicloDeVida();
   }
   
-  // Simulación principal
   function simularCicloDeVida() {
     for (let dia = 1; dia <= 5; dia++) {
       console.log("\n" + "🌱".repeat(11));
@@ -137,9 +127,7 @@ const planta = {
     mostrarResultadoFinal();
   }
    
-  // Iniciar simulador cuando el DOM esté listo
   document.addEventListener('DOMContentLoaded', () => {
-    // Mensaje inicial muy visible en consola
     console.log("🚨 ¡IMPORTANTE! 🚨");
     console.log("🚨 ¡ABRE LA CONSOLA DEL NAVEGADOR (F12) PARA VER EL JUEGO! 🚨");
     console.log("🚨 ¡IMPORTANTE! 🚨");
@@ -147,6 +135,6 @@ const planta = {
     setTimeout(() => {
       alert("🌱 ¡Bienvenido al Simulador de Planta Mutante! 🌱\n\nTendrás 5 días para cuidar a tu planta. \nElige sabiamente las acciones.\n\n⚠️ IMPORTANTE: Para ver el juego en la consola del navegador presiona (F12). Juega una primera partida y al finalizarla cancela. Luego, presiona (F5) para recargar la página y vuelve a jugar.");
       simularCicloDeVida();
-    }, 500); // Espera medio segundo después de que el DOM esté listo
+    }, 500);
   }); 
   
