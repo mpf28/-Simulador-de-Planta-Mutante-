@@ -144,11 +144,8 @@ const planta = {
     console.log("🚨 ¡ABRE LA CONSOLA DEL NAVEGADOR (F12) PARA VER EL JUEGO! 🚨");
     console.log("🚨 ¡IMPORTANTE! 🚨");
 
-    console.clear();
-    console.log("🚀 Simulador iniciado");
-
     setTimeout(() => {
-      alert("🌱 ¡Bienvenido al Simulador de Planta Mutante! 🌱\n\nTendrás 5 días para cuidar a tu planta. \nElige sabiamente las acciones.\n\n⚠️ IMPORTANTE: Abre la consola del navegador (F12) para ver el juego.");
+      alert("🌱 ¡Bienvenido al Simulador de Planta Mutante! 🌱\n\nTendrás 5 días para cuidar a tu planta. \nElige sabiamente las acciones.\n\n⚠️ IMPORTANTE: Para ver el juego en la consola del navegador presiona (F12). Juega una primera partida y al finalizarla cancela. Luego, presiona (F5) para recargar la página y vuelve a jugar.");
       simularCicloDeVida();
     }, 500); // Espera medio segundo después de que el DOM esté listo
   }); 
